@@ -6,7 +6,7 @@ Source: anon-apt-sources-list
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@riseup.net>
-Build-Depends: debhelper (>= 8), faketime, git, config-package-dev (>= 5.1)
+Build-Depends: debhelper (>= 8), faketime, git
 Homepage: https://github.com/Whonix/anon-apt-sources-list
 Vcs-Browser: https://github.com/Whonix/anon-apt-sources-list
 Vcs-Git: https://github.com/Whonix/anon-apt-sources-list.git
@@ -17,10 +17,11 @@ Architecture: all
 Depends: ${misc:Depends}
 Provides: ${diverted-files}
 Conflicts: ${diverted-files}
-Description: /etc/apt/sources.list for Anonymity Linux Distributions
+Description: /etc/apt/sources.list.d/debian.list for Anonymity Linux Distributions
  A question of distribution maintenance strategies. The more standard
- way would indeed be leaving /etc/apt/sources.list alone and using
- /etc/apt/sources.list.d. The idea of managing /etc/apt/sources.list for the
- user is, the anonymity distribution maintainers can decide when it is a better
- "change stable to oldstable", "keep wheezy as long as we need to work out
- [eventual!] issues that would break during upgrade to jessie" and such.
+ way would indeed be populating /etc/apt/sources.list at install or build time
+ and leaving /etc/apt/sources.list.d alone. The idea of managing
+ /etc/apt/sources.list.d/debian.list for the user is, the anonymity
+ distribution maintainers can decide when it is a better "change stable to
+ oldstable", "keep wheezy as long as we need to work out [eventual!] issues
+ that would break during upgrade to jessie" and such.
