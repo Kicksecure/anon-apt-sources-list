@@ -20,7 +20,8 @@ OIFS="${IFS}"
 NIFS=$'\n'
 IFS="${NIFS}"
 for line in $(dpkg-parsechangelog); do
-   read first second _ <<< "$line"
+   IFS="${OIFS}"
+   read -r first second _ <<< "$line"
    first="${first,,}"
    if [ "$first" = "version:" ]; then
       version="$second"
@@ -28,6 +29,9 @@ for line in $(dpkg-parsechangelog); do
    fi
 done
 IFS="${OIFS}"
+
+version="$(echo "$version" | tr "-" " ")"
+version="$(echo "$version" | awk '{print $1}')"
 
 if [ "$version" = "" ]; then
    true "ERROR: variable version is empty."
