@@ -5,10 +5,34 @@
 ## See the file COPYING for copying conditions.
 
 set -x
+
+if [ -f /usr/lib/pre.bsh ]; then
+   source /usr/lib/pre.bsh
+fi
+
+set -e
 set -o pipefail
 
 package_name="$(basename $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ))"
-version="0.1"
+
+command -v dpkg-parsechangelog >/dev/null
+OIFS="${IFS}"
+NIFS=$'\n'
+IFS="${NIFS}"
+for line in $(dpkg-parsechangelog); do
+   read first second _ <<< "$line"
+   first="${first,,}"
+   if [ "$first" = "version:" ]; then
+      version="$second"
+      break
+   fi
+done
+IFS="${OIFS}"
+
+if [ "$version" = "" ]; then
+   true "ERROR: variable version is empty."
+   exit 1
+fi
 
 ./clean
 
@@ -24,17 +48,9 @@ git archive \
    --format=tar HEAD \
    | gzip -n > "../${package_name}_${version}.orig.tar.gz"
 
-if [ ! "$?" = "0" ]; then
-   exit 1
-fi
-
 ls -la "../${package_name}_${version}.orig.tar.gz"
 
 debuild \
    --rootcmd="debian/gain-root-command" \
    -sa \
    ${1+"$@"}
-
-if [ ! "$?" = "0" ]; then
-   exit 1
-fi
