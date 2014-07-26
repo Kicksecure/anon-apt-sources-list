@@ -6,7 +6,7 @@ Source: anon-apt-sources-list
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@riseup.net>
-Build-Depends: debhelper (>= 8), faketime, git
+Build-Depends: debhelper (>= 8), faketime
 Homepage: https://github.com/Whonix/anon-apt-sources-list
 Vcs-Browser: https://github.com/Whonix/anon-apt-sources-list
 Vcs-Git: https://github.com/Whonix/anon-apt-sources-list.git
