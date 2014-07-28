@@ -5,7 +5,7 @@ way would indeed be populating /etc/apt/sources.list at install or build time
 and leaving /etc/apt/sources.list.d alone. The idea of managing
 /etc/apt/sources.list.d/debian.list for the user is, the anonymity
 distribution maintainers can decide when it is a better "change stable to
-oldstable", "keep wheezy as long as we need to work out [eventual!] issues
+oldstable", "keep wheezy as long as needed to work out [eventual!] issues
 that would break during upgrade to jessie" and such.
 
 (This package description has been [automatically](https://github.com/Whonix/whonix-developer-meta-files/blob/master/debug-steps/packaging-helper-script) extracted and mirrored from `debian/control`.)
