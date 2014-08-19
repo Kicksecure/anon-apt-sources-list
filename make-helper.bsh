@@ -596,12 +596,14 @@ make_deb-chl-bumpup() {
 
    get_variables
 
-   local new_upstream_version_without_leading_zero new_upstream_version new_changelog_version
+   local new_upstream_version_without_leading_zero new_upstream_version new_changelog_version new_revision
 
    new_upstream_version_without_leading_zero="$(bc -l <<< "scale=9 ; $version + 0.1")"
    new_upstream_version="$(printf '%3.1f\n' "$new_upstream_version_without_leading_zero")"
 
-   new_changelog_version="$epoch:$new_upstream_version-$revision"
+   new_revision="1"
+
+   new_changelog_version="$epoch:$new_upstream_version-$new_revision"
 
    true "\
 Bumping version from / to...
