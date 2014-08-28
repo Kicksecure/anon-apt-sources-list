@@ -21,14 +21,14 @@
 ## With graphical user interface (KDE), you can use for example:
 ##    kdesudo kwrite /etc/apt/sources.list.d/user.list
 
-deb http://security.debian.org stable/updates main contrib non-free
-deb http://ftp.us.debian.org/debian stable main contrib non-free
+deb http://security.debian.org wheezy/updates main contrib non-free
+deb http://ftp.us.debian.org/debian wheezy main contrib non-free
 
-#deb-src http://security.debian.org stable/updates main contrib non-free
-#deb-src http://ftp.us.debian.org/debian stable main contrib non-free
+#deb-src http://security.debian.org wheezy/updates main contrib non-free
+#deb-src http://ftp.us.debian.org/debian wheezy main contrib non-free
 
 ## Technical notes:
-## - Why is stable-updates disabled by default?
+## - Why is wheezy-updates disabled by default?
 ##   See: http://wiki.debian.org/StableUpdates
 ## - Why are sources (deb-src) disabled by default?
 ##   Because those are not required by most users, to save time while
