@@ -1,3 +1,23 @@
+commit e6d53c0ac092a3f7995a11dd42f25ef583102061
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Nov 21 17:38:00 2016 +0000
+
+    readme
+
+commit df5279b6d34ea9d2819dee81a00721bbcbfb0870
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Aug 19 00:26:00 2016 +0000
+
+    additionally use Debian onion repository
+    
+    https://phabricator.whonix.org/T399
+
+commit e7c4cc74438c4bd03d8e50ab91b5a7c807133b5e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Aug 25 14:07:29 2015 +0000
+
+    bumped changelog version
+
 commit 4c1cdf896cb262b03f22f6b77c7b47f9289b73f7
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jun 3 14:58:48 2015 +0000
