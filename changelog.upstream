@@ -1,3 +1,23 @@
+commit 5e3c204dc3d040fa79cc287abd7911a6d4974108
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 7 23:30:49 2017 +0000
+
+    Allow direct connection to onion domains.
+    
+    apt-get is pointed to a
+    Tor SocksPort anyhow by uwt / torsocks. Therefore this leak protection by
+    apt-get is not required in Whonix.
+    
+    add /etc/apt/apt.conf.d/30onion-allow
+    
+    Acquire::BlockDotOnion "false";
+
+commit d843e5934655bc54ae98af5e72f127365d727324
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 10 00:02:12 2016 +0000
+
+    bumped changelog version
+
 commit e6d53c0ac092a3f7995a11dd42f25ef583102061
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Nov 21 17:38:00 2016 +0000
