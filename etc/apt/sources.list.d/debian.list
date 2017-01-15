@@ -21,20 +21,20 @@
 ## With graphical user interface (KDE), you can use for example:
 ##    kdesudo kwrite /etc/apt/sources.list.d/user.list
 
-deb http://security.debian.org jessie/updates main contrib non-free
-deb http://sgvtcaew4bxjd7ln.onion jessie/updates main contrib non-free
+deb http://security.debian.org stretch/updates main contrib non-free
+deb http://sgvtcaew4bxjd7ln.onion stretch/updates main contrib non-free
 
-deb http://ftp.us.debian.org/debian jessie main contrib non-free
-deb http://vwakviie2ienjx6t.onion/debian jessie main contrib non-free
+deb http://ftp.us.debian.org/debian stretch main contrib non-free
+deb http://vwakviie2ienjx6t.onion/debian stretch main contrib non-free
 
-#deb-src http://security.debian.org jessie/updates main contrib non-free
-#deb-src http://sgvtcaew4bxjd7ln.onion jessie/updates main contrib non-free
+#deb-src http://security.debian.org stretch/updates main contrib non-free
+#deb-src http://sgvtcaew4bxjd7ln.onion stretch/updates main contrib non-free
 
-#deb-src http://ftp.us.debian.org/debian jessie main contrib non-free
-#deb-src http://vwakviie2ienjx6t.onion/debian jessie main contrib non-free
+#deb-src http://ftp.us.debian.org/debian stretch main contrib non-free
+#deb-src http://vwakviie2ienjx6t.onion/debian stretch main contrib non-free
 
 ## Technical notes:
-## - Why is jessie-updates disabled by default?
+## - Why is stretch-updates disabled by default?
 ##   See: http://wiki.debian.org/StableUpdates
 ## - Why are sources (deb-src) disabled by default?
 ##   Because those are not required by most users, to save time while
