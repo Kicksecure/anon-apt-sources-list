@@ -1,3 +1,29 @@
+commit fcc50de31c88b346a4033b93df74549651832978
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 15 10:44:25 2017 +0000
+
+    add lintian override
+    
+    anon-apt-sources-list: package-installs-apt-sources
+
+commit aa63e7468b0ec1d20821cdb37ed6db17925cb849
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 15 08:14:16 2017 +0000
+
+    port to stretch
+
+commit acd00b045af5e9efd833f949f5d344f6088bba01
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 15 08:33:38 2017 +0100
+
+    packaging, bumped Standards-Version from 3.9.6 to 3.9.8 for jessie support
+
+commit e1ec539dbafba791b8f4a20bc6c841d6e7eeb254
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 12 02:47:54 2017 +0000
+
+    bumped changelog version
+
 commit 5e3c204dc3d040fa79cc287abd7911a6d4974108
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jan 7 23:30:49 2017 +0000
