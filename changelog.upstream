@@ -1,3 +1,25 @@
+commit 9c85a9f2486f8c19ee96ba98e3dc3ce3b5a3ad77
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 18 13:21:04 2017 +0000
+
+    use http+tor / apt-transport-tor rather than Acquire::BlockDotOnion "false";
+    
+    https://phabricator.whonix.org/T610
+
+commit 48fbc20a43b85dbe18aa07fabb0a93f1ee02fe69
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 18 13:20:07 2017 +0000
+
+    use http+tor / apt-transport-tor rather than Acquire::BlockDotOnion "false";
+    
+    https://phabricator.whonix.org/T610
+
+commit f3f19c83473d7168505386610b8031635cd618f2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 15 15:18:32 2017 +0000
+
+    bumped changelog version
+
 commit fcc50de31c88b346a4033b93df74549651832978
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Jan 15 10:44:25 2017 +0000
