@@ -1,8 +1,0 @@
-## This file is part of Whonix.
-## Copyright (C) 2012 - 2014 Patrick Schleizer <adrelanos@riseup.net>
-## See the file COPYING for copying conditions.
-
-## Allow direct connection to onion domains. apt-get is pointed to a
-## Tor SocksPort anyhow by uwt / torsocks. Therefore this leak protection by
-## apt-get is not required in Whonix.
-Acquire::BlockDotOnion "false";
