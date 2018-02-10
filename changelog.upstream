@@ -1,3 +1,15 @@
+commit b4ae03292f958440b29c4c4515a93d8fcbf18acb
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Feb 9 15:52:25 2018 +0100
+
+    fix, swap http and onion sources so onion sources are primary and http fallback
+
+commit 6e2c4c9529488743f27efc950054b225c8be97e9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Feb 1 14:37:47 2018 +0000
+
+    bumped changelog version
+
 commit 5873f3464ba95207053a1ea8a5e553958887301b
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Jan 29 15:50:06 2018 +0000
