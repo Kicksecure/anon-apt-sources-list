@@ -16,9 +16,9 @@
 ## The user may keep their settings even after updating this package.
 ##
 ## Without graphical user interface, you can use for example:
-##    sudo nano /etc/apt/sources.list.d/user.list
+##    sudo editor /etc/apt/sources.list.d/user.list
 ## With graphical user interface (KDE), you can use for example:
-##    kdesudo kwrite /etc/apt/sources.list.d/user.list
+##    kdesudo xdg-open /etc/apt/sources.list.d/user.list
 
 deb tor+http://sgvtcaew4bxjd7ln.onion stretch/updates main contrib non-free
 deb http://security.debian.org stretch/updates main contrib non-free
