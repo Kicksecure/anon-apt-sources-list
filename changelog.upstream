@@ -1,3 +1,21 @@
+commit bea430590ab5da5ad1082c77fcea44cd56cc626b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Aug 6 16:18:38 2018 +0800
+
+    fix mime type
+
+commit 580280e9898e63f2fc743cec3994b6b5d5dd6fbf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 5 14:29:45 2018 +0800
+
+    comment: don't hardcode nano / kwrite, use editor / xdg-open
+
+commit 70b901a09384759f89e2e4ccd113272d6285c939
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Feb 10 13:49:41 2018 +0000
+
+    bumped changelog version
+
 commit b4ae03292f958440b29c4c4515a93d8fcbf18acb
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Feb 9 15:52:25 2018 +0100
