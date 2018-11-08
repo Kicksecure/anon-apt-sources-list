@@ -1,3 +1,17 @@
+commit b8e0ce40b7aeed271dc008a158ecc3a6edbb205b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Nov 8 11:26:38 2018 +0000
+
+    Revert "deb.debian.org and https by default"
+    
+    This reverts commit 9f08431be63b4977931fe2db57b067e660828997.
+
+commit 8b9bd71a22d16de931a804b808ee3cf9b032bb13
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Nov 8 09:54:29 2018 +0000
+
+    bumped changelog version
+
 commit 9f08431be63b4977931fe2db57b067e660828997
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Nov 8 08:50:22 2018 +0000
