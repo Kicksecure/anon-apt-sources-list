@@ -1,3 +1,17 @@
+commit 9f08431be63b4977931fe2db57b067e660828997
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Nov 8 08:50:22 2018 +0000
+
+    deb.debian.org and https by default
+    
+    https://phabricator.whonix.org/T721
+
+commit 2ff01edb89ca7b57fde138d4ba80b43f4a050769
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Aug 27 15:43:14 2018 +0000
+
+    bumped changelog version
+
 commit 7cb648bf8bb6f73d2e91545bb9a451ee74a0d37e
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Aug 21 05:17:47 2018 +0800
