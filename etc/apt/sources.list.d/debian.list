@@ -20,10 +20,10 @@
 # With graphical user interface (KDE), you can use for example:
 #    kdesudo xdg-open /etc/apt/sources.list.d/user.list
 
-deb tor+http://sgvtcaew4bxjd7ln.onion stretch/updates main contrib non-free
+#deb tor+http://sgvtcaew4bxjd7ln.onion stretch/updates main contrib non-free
 deb http://security.debian.org stretch/updates main contrib non-free
 
-deb tor+http://vwakviie2ienjx6t.onion/debian stretch main contrib non-free
+#deb tor+http://vwakviie2ienjx6t.onion/debian stretch main contrib non-free
 deb http://ftp.us.debian.org/debian stretch main contrib non-free
 
 #deb-src tor+http://sgvtcaew4bxjd7ln.onion stretch/updates main contrib non-free
