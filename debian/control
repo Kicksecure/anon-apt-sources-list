@@ -5,11 +5,11 @@ Source: anon-apt-sources-list
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@riseup.net>
-Build-Depends: debhelper (>= 9), genmkfile
+Build-Depends: debhelper (>= 12), genmkfile
 Homepage: https://github.com/Whonix/anon-apt-sources-list
 Vcs-Browser: https://github.com/Whonix/anon-apt-sources-list
 Vcs-Git: https://github.com/Whonix/anon-apt-sources-list.git
-Standards-Version: 3.9.8
+Standards-Version: 4.3.0
 
 Package: anon-apt-sources-list
 Architecture: all
