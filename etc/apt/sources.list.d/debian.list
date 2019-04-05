@@ -17,8 +17,8 @@
 ##
 # Without graphical user interface, you can use for example:
 #    sudo editor /etc/apt/sources.list.d/user.list
-# With graphical user interface (KDE), you can use for example:
-#    gksudo xdg-open /etc/apt/sources.list.d/user.list
+# With graphical user interface (XFCE), you can use for example:
+#    gksudo mousepad /etc/apt/sources.list.d/user.list
 
 #deb tor+http://sgvtcaew4bxjd7ln.onion buster/updates main contrib non-free
 deb https://deb.debian.org/debian-security/ buster/updates main contrib non-free
