@@ -21,16 +21,16 @@
 #    sudo --set-home mousepad /etc/apt/sources.list.d/user.list
 
 #deb tor+http://sgvtcaew4bxjd7ln.onion buster/updates main contrib non-free
-deb https://deb.debian.org/debian-security/ buster/updates main contrib non-free
+deb tor+https://deb.debian.org/debian-security/ buster/updates main contrib non-free
 
 #deb tor+http://vwakviie2ienjx6t.onion/debian buster main contrib non-free
-deb https://deb.debian.org/debian buster main contrib non-free
+deb tor+https://deb.debian.org/debian buster main contrib non-free
 
 #deb-src tor+http://sgvtcaew4bxjd7ln.onion buster/updates main contrib non-free
-#deb-src https://deb.debian.org/debian-security/ buster/updates main contrib non-free
+#deb-src tor+https://deb.debian.org/debian-security/ buster/updates main contrib non-free
 
 #deb-src tor+http://vwakviie2ienjx6t.onion/debian buster main contrib non-free
-#deb-src https://deb.debian.org/debian buster main contrib non-free
+#deb-src tor+https://deb.debian.org/debian buster main contrib non-free
 
 # Technical notes:
 # - Why is buster-updates disabled by default?
