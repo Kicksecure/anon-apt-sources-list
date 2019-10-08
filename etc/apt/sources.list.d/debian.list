@@ -35,7 +35,9 @@ deb tor+https://deb.debian.org/debian buster main contrib non-free
 #### meta start
 #### project Whonix and Kicksecure
 #### category networking and apt
-#### description Debian APT repository sources.list
+#### description
+## Debian APT repository sources.list
+##
 ## Configured to use <code>tor+https</code>.
 ##
 ## Technical notes:
