@@ -16,7 +16,7 @@
 ## The user may keep their settings even after updating this package.
 ##
 ## Without graphical user interface, you can use for example:
-##    sudo editor /etc/apt/sources.list.d/user.list
+##    sudoedit /etc/apt/sources.list.d/user.list
 ## With graphical user interface (XFCE), you can use for example:
 ##    sudo --set-home mousepad /etc/apt/sources.list.d/user.list
 
