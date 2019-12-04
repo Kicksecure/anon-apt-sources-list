@@ -18,7 +18,7 @@
 ## Without graphical user interface, you can use for example:
 ##    sudoedit /etc/apt/sources.list.d/user.list
 ## With graphical user interface (XFCE), you can use for example:
-##    sudo --set-home mousepad /etc/apt/sources.list.d/user.list
+##    gsudoedit /etc/apt/sources.list.d/user.list
 
 #deb tor+http://sgvtcaew4bxjd7ln.onion buster/updates main contrib non-free
 deb tor+https://deb.debian.org/debian-security/ buster/updates main contrib non-free
