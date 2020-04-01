@@ -1,3 +1,9 @@
+anon-apt-sources-list (3:3.7-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 01 Apr 2020 14:14:16 +0000
+
 anon-apt-sources-list (3:3.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
