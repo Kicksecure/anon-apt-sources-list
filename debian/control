@@ -5,7 +5,7 @@ Source: anon-apt-sources-list
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@riseup.net>
-Build-Depends: debhelper (>= 12), genmkfile
+Build-Depends: debhelper (>= 12)
 Homepage: https://github.com/Whonix/anon-apt-sources-list
 Vcs-Browser: https://github.com/Whonix/anon-apt-sources-list
 Vcs-Git: https://github.com/Whonix/anon-apt-sources-list.git
