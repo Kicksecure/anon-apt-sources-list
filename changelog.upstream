@@ -1,3 +1,15 @@
+commit deda86f69a22edf042d7e9a5a9d4e04f6979932f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 15 14:05:25 2020 -0400
+
+    readme
+
+commit 40d7103597853b94231d8fa2f2c1fd19621fff2d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 2 07:23:48 2020 -0400
+
+    bumped changelog version
+
 commit 71a9708f479613ae143210d844ef7dbe80f2daed
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 2 07:22:04 2020 -0400
