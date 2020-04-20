@@ -23,11 +23,17 @@
 #deb tor+http://sgvtcaew4bxjd7ln.onion buster/updates main contrib non-free
 deb tor+https://deb.debian.org/debian-security/ buster/updates main contrib non-free
 
+#deb tor+http://vwakviie2ienjx6t.onion/debian buster-updates main contrib non-free
+deb tor+https://deb.debian.org/debian buster-updates main contrib non-free
+
 #deb tor+http://vwakviie2ienjx6t.onion/debian buster main contrib non-free
 deb tor+https://deb.debian.org/debian buster main contrib non-free
 
 #deb-src tor+http://sgvtcaew4bxjd7ln.onion buster/updates main contrib non-free
 #deb-src tor+https://deb.debian.org/debian-security/ buster/updates main contrib non-free
+
+#deb-src tor+http://vwakviie2ienjx6t.onion/debian buster-updates main contrib non-free
+#deb-src tor+https://deb.debian.org/debian buster-update main contrib non-free
 
 #deb-src tor+http://vwakviie2ienjx6t.onion/debian buster main contrib non-free
 #deb-src tor+https://deb.debian.org/debian buster main contrib non-free
@@ -41,8 +47,6 @@ deb tor+https://deb.debian.org/debian buster main contrib non-free
 ## Configured to use <code>tor+https</code>.
 ##
 ## Technical notes:
-## - Why is buster-updates disabled by default?
-##   See: https://wiki.debian.org/StableUpdates
 ## - Why are sources (deb-src) disabled by default?
 ##   Because those are not required by most users, to save time while
 ##   running <code>sudo apt update</code>.
