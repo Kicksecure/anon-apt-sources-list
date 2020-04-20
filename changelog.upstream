@@ -1,3 +1,21 @@
+commit 13d77accfb3635acbd09aa9ae56da3f088ce2bd6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 20 08:54:08 2020 -0400
+
+    enable stable-updates by default
+    
+    https://wiki.debian.org/StableUpdates
+    
+    Thanks to @tempest for the suggestion!
+    
+    https://forums.whonix.org/t/enable-debian-stable-updates-repository-by-default/9382
+
+commit 1d6924edbbf56ac00c787a594c39020ce70d6aed
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 16 08:18:37 2020 -0400
+
+    bumped changelog version
+
 commit deda86f69a22edf042d7e9a5a9d4e04f6979932f
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 15 14:05:25 2020 -0400
