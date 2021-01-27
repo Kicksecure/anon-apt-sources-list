@@ -9,7 +9,7 @@ oldstable", "keep wheezy as long as needed to work out [eventual!] issues
 that would break during upgrade to jessie" and such.
 ## How to install `anon-apt-sources-list` using apt-get ##
 
-1\. Download [Whonix's Signing Key]().
+1\. Download Whonix's Signing Key.
 
 ```
 wget https://www.whonix.org/patrick.asc
