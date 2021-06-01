@@ -8,7 +8,8 @@
 ## distribution, see: /usr/share/doc/apt/examples/sources.list
 
 ## Instead of directly editing this file,
-## the user is advised to create the file /etc/apt/sources.list.d/user.list.
+## the user is advised to create the following file:
+## /etc/apt/sources.list.d/user.list
 ## This is because when this package gets updated,
 ## /etc/apt/sources.list.d/debian.list will be overwritten and may receive new
 ## new default values and comments. The entire folder /etc/apt/sources.list.d/
@@ -56,4 +57,5 @@ deb-src   tor+https://deb.debian.org/debian-security                            
 ##   running <code>sudo apt update</code>.
 ## - See also: https://www.debian.org/security/
 ## - See also: <code>/etc/apt/sources.list.d/</code>
+## - Same format as https://onion.debian.org
 #### meta end
