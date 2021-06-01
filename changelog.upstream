@@ -1,3 +1,37 @@
+commit e9cab4256512eeabd56a49a25ef314f71fbd462d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jun 1 05:09:48 2021 -0400
+
+    comment
+
+commit bbb5bf9cc1bd8af7f8a2d364b60ac75ef8b3b75d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jun 1 05:08:38 2021 -0400
+
+    use same format as https://onion.debian.org
+
+commit a7429c32d94c406e4f00478fa095989fb98e4546
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jun 1 04:56:36 2021 -0400
+
+    remove trailing slash ("`/`") from Debian security repository
+    
+    since not used on https://onion.debian.org either
+
+commit e3a261a3ab032f964c65c47a3187d6f4624f01f4
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jun 1 04:55:45 2021 -0400
+
+    update to onion v3
+    
+    https://onion.debian.org
+
+commit 0d596841cd08f72aea5b681a79c09d0e74e5c320
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 17 10:50:41 2021 -0400
+
+    bumped changelog version
+
 commit 568ff54888ec447d241815a41d677a3023dd27cd
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Mar 17 10:50:40 2021 -0400
