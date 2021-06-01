@@ -21,7 +21,7 @@
 ##    gsudoedit /etc/apt/sources.list.d/user.list
 
 #deb tor+http://5ajw6aqf3ep7sijnscdzw77t7xq4xjpsy335yb2wiwgouo7yfxtjlmid.onion buster/updates main contrib non-free
-deb tor+https://deb.debian.org/debian-security/ buster/updates main contrib non-free
+deb tor+https://deb.debian.org/debian-security buster/updates main contrib non-free
 
 #deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian buster-updates main contrib non-free
 deb tor+https://deb.debian.org/debian buster-updates main contrib non-free
@@ -30,7 +30,7 @@ deb tor+https://deb.debian.org/debian buster-updates main contrib non-free
 deb tor+https://deb.debian.org/debian buster main contrib non-free
 
 #deb-src tor+http://5ajw6aqf3ep7sijnscdzw77t7xq4xjpsy335yb2wiwgouo7yfxtjlmid.onion buster/updates main contrib non-free
-#deb-src tor+https://deb.debian.org/debian-security/ buster/updates main contrib non-free
+#deb-src tor+https://deb.debian.org/debian-security buster/updates main contrib non-free
 
 #deb-src tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian buster-updates main contrib non-free
 #deb-src tor+https://deb.debian.org/debian buster-updates main contrib non-free
