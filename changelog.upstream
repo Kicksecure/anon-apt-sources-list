@@ -1,3 +1,15 @@
+commit 478336061969596efe9b7ddc3b36c51afb51139a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jun 9 12:14:23 2021 -0400
+
+    remove extra spaces
+
+commit 904249a8ceb0e08a6933f49669df7f68187893b2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Jun 5 16:46:58 2021 -0400
+
+    bumped changelog version
+
 commit 4832b9233b923624aa5df742e302576bdbd1882b
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Jun 5 11:19:23 2021 -0400
