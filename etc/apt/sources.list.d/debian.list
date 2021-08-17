@@ -24,7 +24,7 @@
 deb tor+https://deb.debian.org/debian bullseye main contrib non-free
 deb tor+https://deb.debian.org/debian bullseye-updates main contrib non-free
 deb tor+https://deb.debian.org/debian-security bullseye-security main contrib non-free
-#deb tor+https://deb.debian.org/debian bullseye-backports main contrib non-free
+deb tor+https://deb.debian.org/debian bullseye-backports main contrib non-free
 
 #deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bullseye main contrib non-free
 #deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bullseye-security main contrib non-free
