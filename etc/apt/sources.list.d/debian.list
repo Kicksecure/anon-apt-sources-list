@@ -25,11 +25,14 @@ deb tor+https://deb.debian.org/debian bullseye main contrib non-free
 deb tor+https://deb.debian.org/debian bullseye-updates main contrib non-free
 deb tor+https://deb.debian.org/debian-security bullseye-security main contrib non-free
 deb tor+https://deb.debian.org/debian bullseye-backports main contrib non-free
+#deb tor+https://fasttrack.debian.net/debian bullseye-fasttrack main contrib non-free
 
 #deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bullseye main contrib non-free
 #deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bullseye-security main contrib non-free
 #deb tor+http://5ajw6aqf3ep7sijnscdzw77t7xq4xjpsy335yb2wiwgouo7yfxtjlmid.onion/debian-security bullseye-security main contrib non-free
 #deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bullseye-backports main contrib non-free
+## No onion for fasttrack yet:
+## https://salsa.debian.org/fasttrack-team/support/-/issues/27
 
 ####
 
@@ -37,11 +40,14 @@ deb tor+https://deb.debian.org/debian bullseye-backports main contrib non-free
 #deb-src tor+https://deb.debian.org/debian bullseye-updates main contrib non-free
 #deb-src tor+https://deb.debian.org/debian-security bullseye-security main contrib non-free
 #deb-src tor+https://deb.debian.org/debian bullseye-backports main contrib non-free
+#deb-src tor+https://fasttrack.debian.net/debian bullseye-fasttrack main contrib non-free
 
 #deb-src tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bullseye main contrib non-free
 #deb-src tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bullseye-updates main contrib non-free
 #deb-src tor+http://5ajw6aqf3ep7sijnscdzw77t7xq4xjpsy335yb2wiwgouo7yfxtjlmid.onion/debian-security bullseye-security main contrib non-free
 #deb-src tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bullseye-backports main contrib non-free
+## No onion for fasttrack yet:
+## https://salsa.debian.org/fasttrack-team/support/-/issues/27
 
 #### meta start
 #### project Whonix and Kicksecure
@@ -58,4 +64,5 @@ deb tor+https://deb.debian.org/debian bullseye-backports main contrib non-free
 ## - See also: https://www.debian.org/security/
 ## - See also: <code>/etc/apt/sources.list.d/</code>
 ## - Same format as https://onion.debian.org
+## - https://fasttrack.debian.net/
 #### meta end
