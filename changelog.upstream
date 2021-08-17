@@ -1,3 +1,27 @@
+commit 14e7fc11fdcb036ce99e4651e348369152341d15
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 17 12:37:02 2021 -0400
+
+    enable fasttrack.debian.net by default
+
+commit beb7359ef219a99ebe2aedbfcdeff649706adbb3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 17 12:36:32 2021 -0400
+
+    add fasttrack.debian.net
+
+commit 05f19b546e5f0ff11c57e313e1baeae2c369c7ca
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 17 12:30:25 2021 -0400
+
+    enable backports repository by default
+
+commit 128f4448617a57dd78f85919e33c4e722df3fce2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Aug 5 16:26:02 2021 -0400
+
+    bumped changelog version
+
 commit 13d2352f185a17730ffd6177abab460898b84717
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Aug 3 05:48:14 2021 -0400
