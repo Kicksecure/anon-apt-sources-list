@@ -1,3 +1,15 @@
+commit 9f7f8a607b5410672fb3d35d5613de5f83cdc6de
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Oct 25 12:22:23 2021 -0400
+
+    Depends: fasttrack-archive-keyring
+
+commit f869950a6b882de81086c2c0802f2018ebef583f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Sep 11 18:29:30 2021 -0400
+
+    bumped changelog version
+
 commit 4173b0f6bc9334ab3cf016a4a4a1321125ab9390
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Sep 11 16:31:03 2021 -0400
