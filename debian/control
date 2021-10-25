@@ -14,7 +14,7 @@ Rules-Requires-Root: no
 
 Package: anon-apt-sources-list
 Architecture: all
-Depends: ${misc:Depends}
+Depends: fasttrack-archive-keyring, ${misc:Depends}
 Description: /etc/apt/sources.list.d/debian.list for Anonymity Linux Distributions
  A question of distribution maintenance strategies. The more standard
  way would indeed be populating /etc/apt/sources.list at install or build time
