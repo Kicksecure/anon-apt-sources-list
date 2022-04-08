@@ -1,4 +1,4 @@
-# /etc/apt/sources.list.d/debian.list for Anonymity Linux Distributions #
+# /etc/apt/sources.list.d/debian.list for Secuirty-Focussed Linux Distributions #
 
 A question of distribution maintenance strategies. The more standard
 way would indeed be populating /etc/apt/sources.list at install or build time

@@ -15,11 +15,11 @@ Rules-Requires-Root: no
 Package: anon-apt-sources-list
 Architecture: all
 Depends: fasttrack-archive-keyring, ${misc:Depends}
-Description: /etc/apt/sources.list.d/debian.list for Anonymity Linux Distributions
+Description: APT Sources List for Security-Focussed Linux Distributions
  A question of distribution maintenance strategies. The more standard
  way would indeed be populating /etc/apt/sources.list at install or build time
  and leaving /etc/apt/sources.list.d alone. The idea of managing
- /etc/apt/sources.list.d/debian.list for the user is, the anonymity
+ /etc/apt/sources.list.d/debian.list for the user is, the security-focused
  distribution maintainers can decide when it is a better "change stable to
  oldstable", "keep wheezy as long as needed to work out [eventual!] issues
  that would break during upgrade to jessie" and such.
