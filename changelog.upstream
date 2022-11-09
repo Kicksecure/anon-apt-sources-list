@@ -1,3 +1,19 @@
+commit a4e0d9935a6c9ae3a816e7dea32fbc8dc92b4a6d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Nov 7 15:03:02 2022 -0500
+
+    comment: add fasttrack onion
+    
+    https://forums.whonix.org/t/install-debian-fasttrack-archive-keyring-enable-debian-fasttrack-repository-by-default/11456/9
+    
+    https://web.archive.org/web/20221107195903/https://securityheaders.com/?q=https%3A%2F%2Ffasttrack.debian.net%2F&followRedirects=on
+
+commit ef4a828e8e79d7a93aea86008630127c892e9da6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 25 06:05:36 2022 -0400
+
+    bumped changelog version
+
 commit d3b42f12536bb58ea2b32153730738751ac43f55
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed May 25 06:05:22 2022 -0400
