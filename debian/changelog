@@ -1,3 +1,9 @@
+anon-apt-sources-list (3:5.6-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 15 Jun 2023 16:57:34 +0000
+
 anon-apt-sources-list (3:5.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
