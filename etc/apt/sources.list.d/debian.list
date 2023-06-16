@@ -21,29 +21,29 @@
 ## With graphical user interface (XFCE), you can use for example:
 ##    gsudoedit /etc/apt/sources.list.d/user.list
 
-deb tor+https://deb.debian.org/debian bookworm main contrib non-free
-deb tor+https://deb.debian.org/debian bookworm-updates main contrib non-free
-deb tor+https://deb.debian.org/debian-security bookworm-security main contrib non-free
-deb tor+https://deb.debian.org/debian bookworm-backports main contrib non-free
+deb tor+https://deb.debian.org/debian bookworm main contrib non-free-firmware
+deb tor+https://deb.debian.org/debian bookworm-updates main contrib non-free-firmware
+deb tor+https://deb.debian.org/debian-security bookworm-security main contrib non-free-firmware
+deb tor+https://deb.debian.org/debian bookworm-backports main contrib non-free-firmware
 deb tor+https://fasttrack.debian.net/debian bookworm-fasttrack main contrib non-free
 
-#deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm main contrib non-free
-#deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm-updates main contrib non-free
-#deb tor+http://5ajw6aqf3ep7sijnscdzw77t7xq4xjpsy335yb2wiwgouo7yfxtjlmid.onion/debian-security bookworm-security main contrib non-free
+#deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm main contrib non-free-firmware
+#deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm-updates main contrib non-free-firmware
+#deb tor+http://5ajw6aqf3ep7sijnscdzw77t7xq4xjpsy335yb2wiwgouo7yfxtjlmid.onion/debian-security bookworm-security main contrib non-free-firmware
+#deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm-backports main contrib non-free-firmware
 #deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm-backports main contrib non-free
-#deb tor+http://5phjdr2nmprmhdhw4fdqfxvpvt363jyoeppewju2oqllec7ymnolieyd.onion/debian bookworm-fasttrack main contrib non-free
 
 ####
 
-#deb-src tor+https://deb.debian.org/debian bookworm main contrib non-free
-#deb-src tor+https://deb.debian.org/debian bookworm-updates main contrib non-free
-#deb-src tor+https://deb.debian.org/debian-security bookworm-security main contrib non-free
-#deb-src tor+https://deb.debian.org/debian bookworm-backports main contrib non-free
+#deb-src tor+https://deb.debian.org/debian bookworm main contrib non-free-firmware
+#deb-src tor+https://deb.debian.org/debian bookworm-updates main contrib non-free-firmware
+#deb-src tor+https://deb.debian.org/debian-security bookworm-security main contrib non-free-firmware
+#deb-src tor+https://deb.debian.org/debian bookworm-backports main contrib non-free-firmware
 #deb-src tor+https://fasttrack.debian.net/debian bookworm-fasttrack main contrib non-free
 
-#deb-src tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm main contrib non-free
-#deb-src tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm-updates main contrib non-free
-#deb-src tor+http://5ajw6aqf3ep7sijnscdzw77t7xq4xjpsy335yb2wiwgouo7yfxtjlmid.onion/debian-security bookworm-security main contrib non-free
+#deb-src tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm main contrib non-free-firmware
+#deb-src tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm-updates main contrib non-free-firmware
+#deb-src tor+http://5ajw6aqf3ep7sijnscdzw77t7xq4xjpsy335yb2wiwgouo7yfxtjlmid.onion/debian-security bookworm-security main contrib non-free-firmware
 #deb-src tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm-backports main contrib non-free
 ## No onion for fasttrack yet:
 ## https://salsa.debian.org/fasttrack-team/support/-/issues/27
