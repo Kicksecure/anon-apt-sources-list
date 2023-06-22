@@ -18,7 +18,7 @@
 ##
 ## Without graphical user interface, you can use for example:
 ##    sudoedit /etc/apt/sources.list.d/user.list
-## With graphical user interface (XFCE), you can use for example:
+## With graphical user interface (Xfce), you can use for example:
 ##    gsudoedit /etc/apt/sources.list.d/user.list
 
 deb tor+https://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
