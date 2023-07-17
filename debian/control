@@ -6,9 +6,9 @@ Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@whonix.org>
 Build-Depends: debhelper (>= 13), debhelper-compat (= 13)
-Homepage: https://github.com/Whonix/anon-apt-sources-list
-Vcs-Browser: https://github.com/Whonix/anon-apt-sources-list
-Vcs-Git: https://github.com/Whonix/anon-apt-sources-list.git
+Homepage: https://github.com/Kicksecure/anon-apt-sources-list
+Vcs-Browser: https://github.com/Kicksecure/anon-apt-sources-list
+Vcs-Git: https://github.com/Kicksecure/anon-apt-sources-list.git
 Standards-Version: 4.6.2
 Rules-Requires-Root: no
 
