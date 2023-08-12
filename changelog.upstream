@@ -1,3 +1,37 @@
+commit 2b33da2f2f4ca4664f3178b4bea79964a646d8c0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Aug 12 10:15:05 2023 -0400
+
+    comment
+
+commit 89186ce7680f7025867de699fd814faed395ca33
+Merge: 59ba66d 404f7a6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Aug 12 10:13:40 2023 -0400
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit 404f7a64fddc5ab34fa51a4ff0feda009008d999
+Merge: 59ba66d 16d9268
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Aug 12 10:12:58 2023 -0400
+
+    Merge pull request #1 from TNTBOMBOM/master-1
+    
+    Remove duplication of debian bookworm onion
+
+commit 16d92686a6c35820d0bc440fc426643c371ff183
+Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
+Date:   Thu Aug 10 16:36:42 2023 +0000
+
+    Remove duplication of debian bookworm onion
+
+commit 59ba66d4909cf2e950bc6e472f490e1a89fd3c98
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jul 17 11:30:50 2023 -0400
+
+    bumped changelog version
+
 commit 69de0b894f4c824daaf32bc3fd3ef6b54424df0d
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Jul 17 11:16:00 2023 -0400
