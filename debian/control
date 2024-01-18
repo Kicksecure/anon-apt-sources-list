@@ -5,7 +5,8 @@ Source: anon-apt-sources-list
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@kicksecure.com>
-Build-Depends: debhelper (>= 13), debhelper-compat (= 13)
+Build-Depends: debhelper (>= 13),
+               debhelper-compat (= 13)
 Homepage: https://github.com/Kicksecure/anon-apt-sources-list
 Vcs-Browser: https://github.com/Kicksecure/anon-apt-sources-list
 Vcs-Git: https://github.com/Kicksecure/anon-apt-sources-list.git
@@ -14,7 +15,8 @@ Rules-Requires-Root: no
 
 Package: anon-apt-sources-list
 Architecture: all
-Depends: fasttrack-archive-keyring, ${misc:Depends}
+Depends: fasttrack-archive-keyring,
+         ${misc:Depends}
 Description: Kicksecure APT and Flatpak Repository Configuration
  Configuring APT and Flatpak sources:
  - Includes Debian APT repositories (main, updates, backports, fasttrack, security)
