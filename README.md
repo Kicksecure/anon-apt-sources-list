@@ -1,8 +1,28 @@
-# APT Sources List for Security-Focussed Linux Distributions #
+# Kicksecure APT and Flatpak Repository Configuration #
 
-A question of distribution maintenance strategies. The more standard
+Configuring APT and Flatpak sources:
+- Includes Debian APT repositories (main, updates, backports, fasttrack,
+security)
+- Incorporates Debian APT components (main, contrib, non-free,
+non-free-firmware)
+- Integrates the Flathub repository (verified and floss subsets only)
+
+Flatpak:
+- Official Flathub repository only.
+- Uses subset verified_floss, which means only verified applications and
+freedom software can be installed by default.
+
+Provides configuration files:
+- /etc/apt/sources.list.d/debian.list for APT sources
+- /etc/flatpak/remotes.d/flathub.flatpakrepo for Flatpak sources
+
+A Discussion on Distribution Maintenance Strategies:
+
+The more standard
 way would indeed be populating /etc/apt/sources.list at install or build time
-and leaving /etc/apt/sources.list.d alone. The idea of managing
+and leaving /etc/apt/sources.list.d alone.
+
+The idea of managing
 /etc/apt/sources.list.d/debian.list for the user is, the security-focused
 distribution maintainers can decide when it is a better "change stable to
 oldstable", "keep wheezy as long as needed to work out [eventual!] issues
