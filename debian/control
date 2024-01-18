@@ -15,7 +15,30 @@ Rules-Requires-Root: no
 Package: anon-apt-sources-list
 Architecture: all
 Depends: fasttrack-archive-keyring, ${misc:Depends}
-Description: APT Sources List for Security-Focussed Linux Distributions
+Description: APT and Flatpak Sources List for Security-Focussed Linux Distributions
+ Enables Debian APT repositories:
+ - main
+ - updates
+ - backports
+ - fasttrack
+ - security
+ .
+ Uses Debian APT components:
+ - main
+ - contrib
+ - non-free
+ - non-free-firmware
+ .
+ Enables Flatpak repositories:
+ - flathub
+ .
+ Flathub repositorty subset:
+ - verified_floss
+ .
+ Ships:
+ - /etc/apt/sources.list.d/debian.list
+ - /etc/flatpak/remotes.d/flathub.flatpakrepo
+ .
  A Discussion on Distribution Maintenance Strategies:
  .
  The more standard
