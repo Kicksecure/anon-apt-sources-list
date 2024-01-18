@@ -19,20 +19,20 @@ Depends: fasttrack-archive-keyring,
          ${misc:Depends}
 Description: Kicksecure APT and Flatpak Repository Configuration
  Configuring APT and Flatpak sources:
- - Includes Debian APT repositories (main, updates, backports, fasttrack,
-   security)
- - Incorporates Debian APT components (main, contrib, non-free,
-   non-free-firmware)
- - Integrates the Flathub repository (verified and floss subsets only)
+  - Includes Debian APT repositories (main, updates, backports, fasttrack,
+    security)
+  - Incorporates Debian APT components (main, contrib, non-free,
+    non-free-firmware)
+  - Integrates the Flathub repository (verified and floss subsets only)
  .
  Flatpak:
- - Official Flathub repository only.
- - Uses subset verified_floss, which means only verified applications and
+  - Official Flathub repository only.
+  - Uses subset verified_floss, which means only verified applications and
    freedom software can be installed by default.
  .
  Provides configuration files:
- - /etc/apt/sources.list.d/debian.list for APT sources
- - /etc/flatpak/remotes.d/flathub.flatpakrepo for Flatpak sources
+  - /etc/apt/sources.list.d/debian.list for APT sources
+  - /etc/flatpak/remotes.d/flathub.flatpakrepo for Flatpak sources
  .
  A Discussion on Distribution Maintenance Strategies:
  .
