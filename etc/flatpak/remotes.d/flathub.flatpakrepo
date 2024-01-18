@@ -1,5 +1,6 @@
 [Flatpak Repo]
-Title=Flathub
+Title=Flathub - Verified and Floss (Freedom Software) - --subset=verified_floss
+Subset=verified_floss
 Url=https://dl.flathub.org/repo/
 Homepage=https://flathub.org/
 Comment=Central repository of Flatpak applications
