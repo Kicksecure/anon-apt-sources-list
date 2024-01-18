@@ -19,7 +19,7 @@ Depends: fasttrack-archive-keyring,
          ${misc:Depends}
 Description: Kicksecure APT and Flatpak Repository Configuration
  Configuring APT and Flatpak sources:
- - Includes Debian APT repositories (main, updates, backports, fasttrack, 
+ - Includes Debian APT repositories (main, updates, backports, fasttrack,
    security)
  - Incorporates Debian APT components (main, contrib, non-free,
    non-free-firmware)
