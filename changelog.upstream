@@ -1,3 +1,77 @@
+commit e5c79e2d5861ae065638723bd90ca6c504ff10cb
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 18 08:52:53 2024 -0500
+
+    readme
+
+commit 35a940242a6907fbf0c5bd70399e869e44064055
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 18 08:51:14 2024 -0500
+
+    description
+
+commit 8b2fbf587db3ebed09869960b073a66378ce1df0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 18 08:49:54 2024 -0500
+
+    minor
+
+commit 377cb4a73146a48308fe3683c4b2bf4356519fe9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 18 08:47:43 2024 -0500
+
+    fold
+
+commit 00b4bced7ae78a1191896edc40a6aa54edb4c305
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 18 08:44:31 2024 -0500
+
+    wrap-and-sort
+
+commit c8c7212e8c6e3e44f5c62dae183b7b0ca01041c0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 18 08:41:19 2024 -0500
+
+    description
+
+commit eebbf6698c3aa3770f716fdaa0f9ef1c1d9d6e50
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 18 08:29:54 2024 -0500
+
+    description
+
+commit 3200aa43455697b56c7c46a0a06b0ddf05643a7c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 18 08:24:52 2024 -0500
+
+    description
+
+commit 768d4d53fcba74af8ae88f3440d0a2d5086cd92f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 18 05:44:31 2024 -0500
+
+    allows only installation of Flatpak applications that are both, `verified` publishers and `floss` (Freedom Software)
+    
+    this is equivalent to the `flatpak` `--subset=verified_floss` option
+
+commit b73e3db789f7025377611ea4b5d32ea58247f460
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 18 02:55:40 2024 -0500
+
+    enable Flathub repository by default
+    
+    `/etc/flatpak/remotes.d/flathub.flatpakrepo`
+    
+    source: https://flathub.org/repo/flathub.flatpakrepo
+    
+    https://forums.whonix.org/t/flatpak-as-a-software-source-flathub-as-a-source-of-software/8500
+
+commit 4c888435743ac9effdb17b7194b74f1e949a19e6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Nov 11 20:10:58 2023 +0000
+
+    bumped changelog version
+
 commit 19bc86b1c57419c3206d37bed07cf39675d1ec04
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Nov 11 13:41:27 2023 -0500
