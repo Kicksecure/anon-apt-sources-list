@@ -1,3 +1,30 @@
+commit c4c17891ca1de99d1de340fc832f77b23158e01d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Nov 10 07:31:02 2024 -0500
+
+    Revert "Avoid naming conflict with live-build"
+    
+    This reverts commit d67a11b5ac98fce151ad82fe0fec7292409cd55a.
+
+commit 3d90473d00e8527aedcc04b4e7847e93c8adbf8e
+Merge: 92bab0c d67a11b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Nov 10 07:29:37 2024 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/live-build'
+
+commit d67a11b5ac98fce151ad82fe0fec7292409cd55a
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Fri Oct 25 12:22:53 2024 -0500
+
+    Avoid naming conflict with live-build
+
+commit 92bab0cb6f4884970f5f33f5836e4ec1f08519ed
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Mar 9 14:08:09 2024 +0000
+
+    bumped changelog version
+
 commit 67ce9fe10a451f249ebe7e56edacb4de48dc0c50
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Mar 9 09:07:57 2024 -0500
