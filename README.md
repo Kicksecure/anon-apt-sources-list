@@ -85,4 +85,3 @@ NOTE: Replace `generic-package` with the actual name of this package `anon-apt-s
 ## Donate ##
 
 `anon-apt-sources-list` requires [donations](https://www.kicksecure.com/wiki/Donate) to stay alive!
-
