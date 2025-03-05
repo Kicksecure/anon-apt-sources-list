@@ -25,7 +25,8 @@ deb tor+https://deb.debian.org/debian bookworm main contrib non-free non-free-fi
 deb tor+https://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
 deb tor+https://deb.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
 deb tor+https://deb.debian.org/debian bookworm-backports main contrib non-free non-free-firmware
-deb tor+https://fasttrack.debian.net/debian bookworm-fasttrack main contrib non-free
+deb tor+https://fasttrack.debian.net/debian-fasttrack bookworm-fasttrack main contrib non-free
+deb tor+https://fasttrack.debian.net/debian-fasttrack bookworm-backports-staging main contrib non-free
 
 #deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm main contrib non-free non-free-firmware
 #deb tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm-updates main contrib non-free non-free-firmware
@@ -39,7 +40,8 @@ deb tor+https://fasttrack.debian.net/debian bookworm-fasttrack main contrib non-
 #deb-src tor+https://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
 #deb-src tor+https://deb.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
 #deb-src tor+https://deb.debian.org/debian bookworm-backports main contrib non-free non-free-firmware
-#deb-src tor+https://fasttrack.debian.net/debian bookworm-fasttrack main contrib non-free
+#deb-src tor+https://fasttrack.debian.net/debian-fasttrack bookworm-fasttrack main contrib non-free
+#deb-src tor+https://fasttrack.debian.net/debian-fasttrack bookworm-backports-staging main contrib non-free
 
 #deb-src tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm main contrib non-free non-free-firmware
 #deb-src tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian bookworm-updates main contrib non-free non-free-firmware
