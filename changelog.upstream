@@ -1,3 +1,31 @@
+commit 6e14fd3c8d7351cf9fe52269f3db1813597fafbb
+Merge: 7c9db10 e5250c2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 5 20:56:34 2025 -0500
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit e5250c2b01c6d65c4ca726abb36da0880d7c313c
+Merge: 7c9db10 149f278
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 5 06:04:00 2025 -0500
+
+    Merge pull request #2 from ben-grande/fasttrack-backports-staging
+    
+    Add Fasttrack backports-staging suite
+
+commit 149f278b4d60a5748fb757166969237f677a01c0
+Author: Ben Grande <ben.grande.b@gmail.com>
+Date:   Wed Mar 5 08:42:06 2025 +0100
+
+    Add Fasttrack backports-staging suite
+
+commit 7c9db10446a9b3d1614d10f24fd0321311a8fdc8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 23 16:14:55 2025 +0000
+
+    bumped changelog version
+
 commit 93a149bc12ffa834c53aeb9c3dcbd3bac6f75f28
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Jan 23 11:08:48 2025 -0500
