@@ -1,3 +1,21 @@
+commit 93d920cee5f2ee4489240242e2daf29270a477da
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Aug 10 19:59:06 2025 -0500
+
+    Switch to using deb822 sources
+
+commit cf83d185090efd1d2249462f7f0f0b8dd1a14374
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Aug 5 22:57:49 2025 -0500
+
+    Port to Trixie.
+
+commit fa2c224bc645ac04afc38e036433a6d022c66b2a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Mar 6 01:58:15 2025 +0000
+
+    bumped changelog version
+
 commit 6e14fd3c8d7351cf9fe52269f3db1813597fafbb
 Merge: 7c9db10 e5250c2
 Author: Patrick Schleizer <adrelanos@whonix.org>
