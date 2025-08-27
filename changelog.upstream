@@ -1,3 +1,29 @@
+commit 3974fc76986ba3ce365220db8f98fda697d868ed
+Merge: 012a1c3 a0d097c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 27 05:01:20 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit a0d097c4d1e417affd5ab710e9f364203c9f72bd
+Merge: 580208f 012a1c3
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Aug 26 19:15:06 2025 -0500
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit 012a1c3ce9f35ac6d5c78fea74b96563925d56ad
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 26 08:31:55 2025 +0000
+
+    bumped changelog version
+
+commit 580208f009345155b627e1e40664521736a3ec42
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Aug 21 18:03:15 2025 -0500
+
+    Replace 'Xfce' with 'LXQt' where appropriate
+
 commit 93d920cee5f2ee4489240242e2daf29270a477da
 Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
 Date:   Sun Aug 10 19:59:06 2025 -0500
