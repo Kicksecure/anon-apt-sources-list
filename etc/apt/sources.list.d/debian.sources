@@ -18,7 +18,7 @@
 ##
 ## Without graphical user interface, you can use for example:
 ##    sudoedit /etc/apt/sources.list.d/user.sources
-## With graphical user interface (Xfce), you can use for example:
+## With graphical user interface (LXQt), you can use for example:
 ##    gsudoedit /etc/apt/sources.list.d/user.sources
 
 ######## ENABLED SOURCES ########
