@@ -1,4 +1,3 @@
-
 # Kicksecure APT and Flatpak Repository Configuration #
 
 Configuring APT and Flatpak sources:
