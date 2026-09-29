@@ -23,14 +23,10 @@ true "
 "
 
 debian_sources_backup_unowned() {
-   ## Overridable path bases: unset -> production paths, so real dpkg (which sets
-   ## none of these) is byte-identical. Only paths are injectable, never a
-   ## success/failure signal.
-   local debian_sources_file="${debian_sources_file:-/etc/apt/sources.list.d/debian.sources}"
-   local do_once_dir="${do_once_dir:-/var/lib/anon-apt-sources-list/do_once}"
-   local backup_name="${debian_sources_file}.pre-anon-apt-sources-list.bak"
-   local marker="${do_once_dir}/${FUNCNAME[0]}_version_1"
-   local query_rc=0
+   local file_name backup_name marker query_rc
+   file_name="/etc/apt/sources.list.d/debian.sources"
+   backup_name="${file_name}.pre-anon-apt-sources-list.bak"
+   marker="/var/lib/anon-apt-sources-list/do_once/${FUNCNAME[0]}_version_1"
 
    if [ -f "${marker}" ]; then
       return 0
@@ -46,27 +42,31 @@ debian_sources_backup_unowned() {
 
    ## Create the marker dir before moving anything: if this fails, dpkg aborts
    ## with debian.sources still in place rather than already moved aside.
-   mkdir --parents "${do_once_dir}"
+   mkdir --parents "/var/lib/anon-apt-sources-list/do_once"
 
    ## dpkg-query -S rc: 1 == path owned by no package (the case to migrate);
    ## 0 == dpkg-owned; >=2 == fatal (corrupt admindir, DB error, dpkg-query
    ## missing). Capture rc explicitly (errexit-safe) and never treat an unknown
    ## ownership state as "unowned".
-   dpkg-query -S "${debian_sources_file}" >/dev/null 2>&1 || query_rc="$?"
+   query_rc=0
+   dpkg-query -S "${file_name}" >/dev/null 2>&1 || query_rc="$?"
 
-   ## Move aside ONLY a copy present on disk AND owned by no package (rc 1). Never
-   ## seize a dpkg-owned copy (rc 0) or act on an unknown ownership state (rc >=2)
-   ## -- either would drop the admin's conffile.
-   ## --no-clobber: never overwrite an existing backup (no data loss).
-   if [ -e "${debian_sources_file}" ] && [ "${query_rc}" = "1" ]; then
-      mv --no-clobber --verbose -- "${debian_sources_file}" "${backup_name}"
+   ## Move aside ONLY an unowned copy (rc 1) that is present on the path -- a
+   ## regular file OR a symlink, including a dangling one, since dpkg would still
+   ## act on it. Never seize a dpkg-owned copy (rc 0) or act on an unknown
+   ## ownership state (rc >=2): either would drop the admin's conffile.
+   ## --backup=numbered: if a backup already exists, preserve it as a numbered
+   ## backup rather than clobbering it (no data loss) or refusing the move (which
+   ## would wedge the migration and re-raise the prompt on every install).
+   if { [ -e "${file_name}" ] || [ -L "${file_name}" ]; } && [ "${query_rc}" = "1" ]; then
+      mv --backup=numbered --verbose -- "${file_name}" "${backup_name}"
    fi
 
    ## Record the do-once marker ONLY once the intended end-state is reached: no
    ## copy of debian.sources remains where apt would read it. Any path that left
-   ## the file in place (owned, unknown ownership, or a --no-clobber no-op) leaves
-   ## the marker unset so a later retry can finish the migration.
-   if [ ! -e "${debian_sources_file}" ]; then
+   ## something on the path (owned, unknown ownership) leaves the marker unset so
+   ## a later retry can finish the migration.
+   if [ ! -e "${file_name}" ] && [ ! -L "${file_name}" ]; then
       touch "${marker}"
    fi
 }
