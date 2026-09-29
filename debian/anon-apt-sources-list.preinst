@@ -1,0 +1,65 @@
+#!/bin/bash
+
+## Copyright (C) 2012 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+set -o errexit
+set -o nounset
+set -o pipefail
+set -o errtrace
+shopt -s inherit_errexit
+shopt -s shift_verbose
+export LC_ALL=C
+
+## helper-scripts is not a dependency of this package; source pre.bsh only if present.
+if [ -f /usr/libexec/helper-scripts/pre.bsh ]; then
+   source /usr/libexec/helper-scripts/pre.bsh
+fi
+
+true "
+#####################################################################
+## INFO: BEGIN: ${DPKG_MAINTSCRIPT_PACKAGE:-} ${DPKG_MAINTSCRIPT_NAME:-} $*
+#####################################################################
+"
+
+debian_sources_backup_unowned() {
+   local file_name backup_name
+
+   if [ -f "/var/lib/anon-apt-sources-list/do_once/${FUNCNAME[0]}_version_1" ]; then
+      return 0
+   fi
+
+   ## Debian 13 (trixie) base install ships an unowned deb822
+   ## /etc/apt/sources.list.d/debian.sources. This package ships the same path
+   ## as a conffile, so a first install would raise a dpkg conffile prompt
+   ## ("File on system created by you or by a script."), fatal under
+   ## DEBIAN_FRONTEND=noninteractive with no stdin. Move an unowned on-disk copy
+   ## aside before unpack so dpkg installs this package's conffile with no
+   ## prompt. Skip a dpkg-owned copy: never seize a package-managed conffile.
+   file_name="/etc/apt/sources.list.d/debian.sources"
+   backup_name="${file_name}.pre-anon-apt-sources-list.bak"
+
+   if [ -e "${file_name}" ] && ! dpkg-query -S "${file_name}" >/dev/null 2>&1 ; then
+      mv --verbose -- "${file_name}" "${backup_name}"
+   fi
+
+   mkdir --parents "/var/lib/anon-apt-sources-list/do_once"
+   touch "/var/lib/anon-apt-sources-list/do_once/${FUNCNAME[0]}_version_1"
+}
+
+debian_sources_backup_unowned
+
+true "INFO: debhelper beginning here."
+
+#DEBHELPER#
+
+true "INFO: Done with debhelper."
+
+true "
+#####################################################################
+## INFO: END  : ${DPKG_MAINTSCRIPT_PACKAGE:-} ${DPKG_MAINTSCRIPT_NAME:-} $*
+#####################################################################
+"
+
+## Explicitly "exit 0", so eventually trapped errors can be ignored.
+exit 0
