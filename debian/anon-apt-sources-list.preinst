@@ -39,11 +39,15 @@ debian_sources_backup_unowned() {
    file_name="/etc/apt/sources.list.d/debian.sources"
    backup_name="${file_name}.pre-anon-apt-sources-list.bak"
 
+   ## Create the marker dir before moving anything: if this fails, dpkg aborts
+   ## with debian.sources still in place rather than already moved aside.
+   mkdir --parents "/var/lib/anon-apt-sources-list/do_once"
+
+   ## --no-clobber: never overwrite an existing backup (no data loss).
    if [ -e "${file_name}" ] && ! dpkg-query -S "${file_name}" >/dev/null 2>&1 ; then
-      mv --verbose -- "${file_name}" "${backup_name}"
+      mv --no-clobber --verbose -- "${file_name}" "${backup_name}"
    fi
 
-   mkdir --parents "/var/lib/anon-apt-sources-list/do_once"
    touch "/var/lib/anon-apt-sources-list/do_once/${FUNCNAME[0]}_version_1"
 }
 
