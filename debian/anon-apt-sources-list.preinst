@@ -1,17 +1,11 @@
 #!/bin/bash
 
-## Copyright (C) 2012 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+## Copyright (C) 2026 - 2026 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
 ## See the file COPYING for copying conditions.
 
+## style-ok: no-strict - full strict block could leak into APT/debconf
 set -o errexit
-set -o nounset
-set -o pipefail
-set -o errtrace
-shopt -s inherit_errexit
-shopt -s shift_verbose
-export LC_ALL=C
 
-## helper-scripts is not a dependency of this package; source pre.bsh only if present.
 if [ -f /usr/libexec/helper-scripts/pre.bsh ]; then
    source /usr/libexec/helper-scripts/pre.bsh
 fi
@@ -31,50 +25,19 @@ debian_sources_backup_unowned() {
    if [ -f "${marker}" ]; then
       return 0
    fi
+   mkdir --parents "${marker%/*}"
 
-   ## Debian 13 (trixie) base install ships an unowned deb822
-   ## /etc/apt/sources.list.d/debian.sources. This package ships the same path
-   ## as a conffile, so a first install would raise a dpkg conffile prompt
-   ## ("File on system created by you or by a script."), fatal under
-   ## DEBIAN_FRONTEND=noninteractive with no stdin. Move an unowned on-disk copy
-   ## aside before unpack so dpkg installs this package's conffile with no
-   ## prompt. Skip a dpkg-owned copy: never seize a package-managed conffile.
-
-   ## Create the marker dir before moving anything: if this fails, dpkg aborts
-   ## with debian.sources still in place rather than already moved aside.
-   mkdir --parents "/var/lib/anon-apt-sources-list/do_once"
-
-   ## dpkg-query -S rc: 0 == dpkg-owned (skip); >=2 == fatal, e.g. dpkg-query
-   ## missing (skip); 1 == "no path found". Note rc 1 is only best-effort proof of
-   ## "owned by no package": dpkg-query also returns 1 when a package's file list
-   ## is missing or the admindir is empty, so a corrupt database can misreport an
-   ## owned path as unowned. The do-once marker bounds that risk to the FIRST
-   ## install, when this path is trixie's own unowned base file (genuinely
-   ## unowned); once migrated the marker short-circuits, so a later corrupt-DB
-   ## upgrade never reaches this branch. Capture rc explicitly (errexit-safe).
-   query_rc=0
-   dpkg-query -S "${file_name}" >/dev/null 2>&1 || query_rc="$?"
-
-   ## Move aside ONLY an unowned copy (rc 1) that is present on the path -- a
-   ## regular file OR a symlink, including a dangling one, since dpkg would still
-   ## act on it. Never seize a dpkg-owned copy (rc 0) or act on a fatal
-   ## dpkg-query state (rc >=2): either would drop the admin's conffile.
-   ## --backup=numbered: if a backup already exists, preserve it as a numbered
-   ## backup rather than clobbering it (no data loss) or refusing the move (which
-   ## would wedge the migration and re-raise the prompt on every install).
-   ## --no-target-directory: treat the backup path as a file, so a directory at
-   ## that path fails loudly instead of nesting the source inside it.
-   if { [ -e "${file_name}" ] || [ -L "${file_name}" ]; } && [ "${query_rc}" = "1" ]; then
-      mv --backup=numbered --no-target-directory --verbose -- "${file_name}" "${backup_name}"
+   ## If debian.sources exists but isn't owned by any package, move it aside
+   ## to avoid a conffile conflict.
+   if [ -e "${file_name}" ] || [ -L "${file_name}" ]; then
+      query_rc=0
+      dpkg-query -S -- "${file_name}" >/dev/null 2>&1 || query_rc="$?"
+      if [ "${query_rc}" = "1" ]; then
+         mv --backup=numbered --no-target-directory --verbose -- "${file_name}" "${backup_name}"
+      fi
    fi
 
-   ## Record the do-once marker ONLY once the intended end-state is reached: no
-   ## copy of debian.sources remains where apt would read it. Any path that left
-   ## something on the path (owned, unknown ownership) leaves the marker unset so
-   ## a later retry can finish the migration.
-   if [ ! -e "${file_name}" ] && [ ! -L "${file_name}" ]; then
-      touch "${marker}"
-   fi
+   touch "${marker}"
 }
 
 debian_sources_backup_unowned
