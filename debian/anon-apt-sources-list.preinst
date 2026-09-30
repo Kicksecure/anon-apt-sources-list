@@ -1,0 +1,58 @@
+#!/bin/bash
+
+## Copyright (C) 2026 - 2026 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+## style-ok: no-strict - full strict block could leak into APT/debconf
+set -o errexit
+
+if [ -f /usr/libexec/helper-scripts/pre.bsh ]; then
+   source /usr/libexec/helper-scripts/pre.bsh
+fi
+
+true "
+#####################################################################
+## INFO: BEGIN: ${DPKG_MAINTSCRIPT_PACKAGE:-} ${DPKG_MAINTSCRIPT_NAME:-} $*
+#####################################################################
+"
+
+debian_sources_backup_unowned() {
+   local file_name backup_name marker query_rc
+   file_name="/etc/apt/sources.list.d/debian.sources"
+   backup_name="${file_name}.pre-anon-apt-sources-list.bak"
+   marker="/var/lib/anon-apt-sources-list/do_once/${FUNCNAME[0]}_version_1"
+
+   if [ -f "${marker}" ]; then
+      return 0
+   fi
+   mkdir --parents "${marker%/*}"
+
+   ## If debian.sources exists but isn't owned by any package, move it aside
+   ## to avoid a conffile conflict.
+   if [ -e "${file_name}" ] || [ -L "${file_name}" ]; then
+      query_rc=0
+      dpkg-query -S -- "${file_name}" >/dev/null 2>&1 || query_rc="$?"
+      if [ "${query_rc}" = "1" ]; then
+         mv --backup=numbered --no-target-directory --verbose -- "${file_name}" "${backup_name}"
+      fi
+   fi
+
+   touch "${marker}"
+}
+
+debian_sources_backup_unowned
+
+true "INFO: debhelper beginning here."
+
+#DEBHELPER#
+
+true "INFO: Done with debhelper."
+
+true "
+#####################################################################
+## INFO: END  : ${DPKG_MAINTSCRIPT_PACKAGE:-} ${DPKG_MAINTSCRIPT_NAME:-} $*
+#####################################################################
+"
+
+## Explicitly "exit 0", so eventually trapped errors can be ignored.
+exit 0
