@@ -1,3 +1,107 @@
+commit fa7902b477c922a34cc684394560ee6acd2fe7c5
+Merge: ea2a0ef d9ab538
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 30 04:13:35 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit d9ab53871e1e569cdc2cffcacc1635b3b6196c2a
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Tue Sep 29 19:58:54 2026 -0400
+
+    Simplify preinst script
+
+commit 792b8a625611fa8002905092ed96e94d2246914b
+Merge: ea2a0ef bfb9a22
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Tue Sep 29 19:38:07 2026 -0400
+
+    Merge branch 'ai' into arraybolt3/trixie
+
+commit bfb9a227682f8c8b963d4348e03ce1df96449044
+Author: claude (dev766 62dbc1a3-8e59-4f93-9f3f-a02c27dbae3e) <noreply@anthropic.com>
+Date:   Tue Sep 29 19:23:06 2026 -0400
+
+    preinst: mv --no-target-directory; honest rc-1 comment
+
+    - mv --no-target-directory: a directory (or symlink-to-dir) at the backup path
+      now fails loud instead of silently nesting the source inside it
+    - comment: dpkg-query -S rc 1 is only best-effort proof of "unowned" (a missing
+      file list / empty admindir is also rc 1); document that the do-once marker
+      bounds that risk to the first install
+
+    Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+commit 064293309d4a53449b71320751df981203a782ab
+Author: claude (dev766 62dbc1a3-8e59-4f93-9f3f-a02c27dbae3e) <noreply@anthropic.com>
+Date:   Tue Sep 29 18:51:31 2026 -0400
+
+    preinst: drop env path seam; harden mv and symlink
+
+    - remove the overridable path bases: a root maintainer script must not read its
+      target paths from the environment (dpkg does not scrub it), which made it a
+      steerable file-rename primitive and risked accidental name collision
+    - mv --backup=numbered: a pre-existing backup no longer wedges the migration
+      forever (the --no-clobber no-op) and a prior backup is preserved, not clobbered
+    - treat a symlink (incl. dangling) as present, so it is migrated aside rather
+      than marked done-in-place while dpkg still follows it
+
+    Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+commit 32e7da37824178f5d6da33ed5239e919836346e4
+Author: claude (dev766 62dbc1a3-8e59-4f93-9f3f-a02c27dbae3e) <noreply@anthropic.com>
+Date:   Tue Sep 29 18:17:39 2026 -0400
+
+    preinst: fix ownership fail-open and do-once marker
+
+    - move aside only on dpkg-query rc 1 (owned by no package); rc >=2 (fatal
+      admindir/DB error) no longer takes the mv branch and seizes an owned conffile
+    - record the do-once marker only once no unowned copy remains on disk, so a
+      partial/failed run stays retryable instead of being blocked by an early return
+    - paths become overridable bases (production-default) so the dist-ai regression
+      test can drive the maintscript against a temp root
+
+    Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+commit c3d2b9e4a897976c5f969e7fbd999dc2dfbea2fc
+Author: claude (dev761 f7feb8c7-9eae-46a0-a33a-e98ffafc0003) <noreply@anthropic.com>
+Date:   Tue Sep 29 16:13:29 2026 -0400
+
+    preinst: no-clobber backup, mkdir before move
+
+    - mv --no-clobber: never overwrite an existing backup, so a prior
+      backup is not destroyed on a marker-reset reinstall.
+    - create the do_once dir before the move: a mkdir failure then aborts
+      dpkg with debian.sources still in place, not already moved aside.
+
+    Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+commit a6b683021d19fe7c2d0d425088d78c30e5b7efde
+Author: claude (dev761 f7feb8c7-9eae-46a0-a33a-e98ffafc0003) <noreply@anthropic.com>
+Date:   Tue Sep 29 14:56:35 2026 -0400
+
+    bumped changelog version
+
+commit 672902c2d65b2500537a1232fb7959dff0746f5a
+Author: claude (dev761 f7feb8c7-9eae-46a0-a33a-e98ffafc0003) <noreply@anthropic.com>
+Date:   Tue Sep 29 14:56:17 2026 -0400
+
+    Avoid debian.sources conffile prompt on morph
+
+    - Debian 13 base ships an unowned deb822 debian.sources; this package
+      ships the same path as a conffile, so a first install raises a dpkg
+      conffile prompt, fatal under noninteractive apt (the trixie morph).
+    - preinst backs up an unowned on-disk copy before unpack, do_once-guarded;
+      a dpkg-owned copy is never touched.
+
+    Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+commit ea2a0efeddfdc481cf9721284c0ea2fce9d947c7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jul 7 10:32:25 2026 +0000
+
+    bumped changelog version
+
 commit 680cedcf2e706868c3b6902feb8c42cc5f9695af
 Merge: e009b08 0252754
 Author: Patrick Schleizer <adrelanos@whonix.org>
